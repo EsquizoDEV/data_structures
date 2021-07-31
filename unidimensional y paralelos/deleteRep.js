@@ -5,23 +5,37 @@ function deleteRep(array) {
     
     console.log(`${array} Es el arreglo original`)
     
-    for(num of array) {
-        count = array.filter(x => x===num).length;
-
-        if(array.indexOf(num) != array.lastIndexOf(num)){
-
-            let = newArray = array.splice(array.indexOf(num),count );
-
-            console.log(`El número ${num} aparece más de una vez y se eliminó del array`);
-            console.log(`${newArray} son los datos eliminados`);
-            console.log(`${array} Es el nuevo arreglo`)
+    for (num of array) {
+        count = array.filter((x) => x===num);
+        
+        if (count.length > 1 ) {
+            let toDelete = count.length; 
             
-        } else if(array.indexOf(num) == array.lastIndexOf(num)) {
+            console.log(`${num} aparece más de una vez, será eliminado del arreglo`);
             
-            console.log(`El número ${num} aparece sólo una vez`)
-            
+            let deleted = array.splice(array.indexOf(num), toDelete);
+
+            console.log(`${deleted} son los datos eliminados`)
+            console.log(`${array} es el nuevo arreglo`)
         }
     }
+    // for(num of array) {
+    //     count = array.filter(x => x===num).length;
+
+    //     if(array.indexOf(num) != array.lastIndexOf(num)){
+
+    //         let = newArray = array.splice(array.indexOf(num),count );
+
+    //         console.log(`El número ${num} aparece más de una vez y se eliminó del array`);
+    //         console.log(`${newArray} son los datos eliminados`);
+    //         console.log(`${array} Es el nuevo arreglo`)
+            
+    //     } else if(array.indexOf(num) == array.lastIndexOf(num)) {
+            
+    //         console.log(`El número ${num} aparece sólo una vez`)
+            
+    //     }
+    // }
     // console.log(`el numero ${num} aparece en la posición ${array.indexOf(num)}, ${array.lastIndexOf(num)}`)
 }
 
